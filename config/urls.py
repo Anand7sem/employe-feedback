@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from feedback.views_home import home  # Import the home view from the new file
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('feedback.urls')),
+    path('', home),
 ]
