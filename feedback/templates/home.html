@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Feedback System</title>
+</head>
+<body>
+    <h1>Welcome to the Employee Feedback System!</h1>
+    <h2>Feedback Entries</h2>
+    <ul>
+        {% for feedback in feedbacks %}
+            <li>
+                <strong>{{ feedback.user.name }} ({{ feedback.user.department }}):</strong>
+                {{ feedback.content }} <em>on {{ feedback.timestamp }}</em>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
