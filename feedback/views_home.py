@@ -1,6 +1,6 @@
-# feedback/views_home.py
-
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Feedback
 
 def home(request):
-    return HttpResponse("Welcome to the Employee Feedback System!")
+    feedbacks = Feedback.objects.select_related('user').all()
+    return render(request, 'home.html', {'feedbacks': feedbacks})
