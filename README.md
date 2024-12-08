@@ -1,1 +1,1 @@
-Employee Feedback module.
+Employee Feedback and Survey module.
